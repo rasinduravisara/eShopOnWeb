@@ -34,8 +34,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: '$(Build.BuildNumber)'
     publishLocation: 'Container'
-- task: IISWebAppDeploymentOnMachineGroup@0
-  inputs:
-    WebSiteName: 'TestWeb'
-    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
-    TakeAppOfflineFlag: true
