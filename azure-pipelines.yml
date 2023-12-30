@@ -16,19 +16,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreCLI@2
-  displayName: 'Use .NET Core SDK'
-  inputs:
-    command: 'use'
-    version: '8.0.1'  # Specify the .NET SDK version you want to use (e.g., '8.0.100')
-
-
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-    verbosityRestore: 'Detailed'
 
 - task: VSBuild@1
   inputs:
